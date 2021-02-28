@@ -21,7 +21,7 @@ inputSearch.addEventListener('keyup', (e) => {
 
             getData(`http://www.omdbapi.com/?i=tt3896198&apikey=c3568c96&s=${searchString}`)
             .then((movies) => movies.forEach((movie) => addMovieToList(movie)))
-            .catch((err) => console.log(err));
+            .catch((err) => console.log());
         }
 
         searchLast = searchString;
