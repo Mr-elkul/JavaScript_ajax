@@ -1,7 +1,7 @@
 
 let searchLast = ' ';
 
-const getData = (url) => fetch(url)
+const getData = (https) => fetch(https)
 .then((response) => response.json())
 .then((json) => {  
     if (!json || !json.Search) throw Error('Server returns incorrect object');
