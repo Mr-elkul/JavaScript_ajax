@@ -132,14 +132,14 @@ const createMarkup = () => {
 
     movieList = document.querySelector('.movies');
     inputSearch = document.querySelector('#search');
-    //  console.log(createMarkup)
+   
 };
 
 const addMovieToList = (movie) => {
   const item = document.createElement('div');
   const img = document.createElement('img');
 
-  img.src = movie.Poster;
+  img.src = /^(http|https):\/\//i.test(movie.Poster) ? movie.Poster : 'url-without-image.png';
   img.classList.add('movie__image');
   item.classList.add('movie');
 

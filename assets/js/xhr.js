@@ -9,8 +9,6 @@ const getData = (url) => fetch(url)
     return json.Search;
 });
 
-
-
 inputSearch.addEventListener('keyup', (e) => {
 
     delay(() => {
